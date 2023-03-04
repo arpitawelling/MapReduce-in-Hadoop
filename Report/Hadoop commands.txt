@@ -1,0 +1,31 @@
+﻿Q1:
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper_time.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper_time.py -file /Users/arpitawelling/ECC_A1_code/reducer_ip.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer_ip.py -input /user/access.log -output /user/ECC_A1-output_access_partial
+
+
+
+
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper2.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper2.py -file /Users/arpitawelling/ECC_A1_code/reducer2.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer2.py -input /user/ECC_A1-output_access_partial/part-00000 -output /user/ECC_A1-output_access_full
+
+
+Q2:
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper3.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper3.py 7-10 -file /Users/arpitawelling/ECC_A1_code/reducer3.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer3.py -input /user/ECC_A1-output_access_full/part-00000 -output /user/ECC_A1-output_range
+
+
+WordCount:
+
+
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper_wordcount.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper_wordcount.py -file /Users/arpitawelling/ECC_A1_code/reducer_wordcount.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer_wordcount.py -input /user/reducer_wc.txt -output /user/ECC_A1-output_wordcount
+
+
+Grep:
+
+
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper_grep.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper_grep.py -file /Users/arpitawelling/ECC_A1_code/reducer_grep.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer_grep.py -input /user/grep_input.txt -output /user/ECC_A1-output_grep
+
+
+
+
+Sort:
+
+
+/opt/homebrew/Cellar/hadoop/3.3.4/bin/hadoop jar /Users/arpitawelling/ECC_A1/hadoop-*streaming*.jar -file /Users/arpitawelling/ECC_A1_code/mapper_sort.py    -mapper /Users/arpitawelling/ECC_A1_code/mapper_sort.py -file /Users/arpitawelling/ECC_A1_code/reducer_sort.py  -reducer /Users/arpitawelling/ECC_A1_code/reducer_sort.py -input /user/ip_data.txt -output /user/ECC_A1-output_sort
